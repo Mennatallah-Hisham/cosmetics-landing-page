@@ -140,7 +140,14 @@ ul{
     list-style: none;
 }
 
-
+.btn-mobile-nav{
+    background: transparent;
+}
+.icon-mobile{
+    stroke: black;
+    fill:red;
+    border:2px soild red;
+}
 .header{
     background-image: url(img/main2.jpg);
     background-size:cover;
@@ -168,10 +175,13 @@ footer .logo , footer p{
 
 .sub{
     margin-top: 2em;
+    padding:1rem 0;
+
 }
 /* media query */
 
 @media(min-width:768px){
+
     .container{
         width:80%;
         max-width:1170px;
