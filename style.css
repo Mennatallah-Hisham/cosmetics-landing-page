@@ -24,7 +24,8 @@
 
 }
 
-a:link {
+a:link,
+a:visited {
  text-decoration: none;
  text-transform: capitalize;
  color:var(--secondary-clr);
@@ -63,11 +64,14 @@ p{
 a:link:hover{
 background-color: var(--btn-clr);
 }
-.btn{
+.btn:link,
+.btn:visited{
     text-align: center;
-    width:100px;
+    width:120px;
+    color:var(--secondary-clr);
 }
-.btn , button {
+.btn,
+ button {
     display: block;
     background-color: var(--btn-clr);
     padding:0.3em 3em;
@@ -76,6 +80,11 @@ background-color: var(--btn-clr);
     margin:2em auto;
   
 
+}
+
+.btn:hover{
+    box-shadow: 0 0 0 1px var(--secondary-clr); 
+    background-color: transparent;
 }
 button{
     color:var(--secondary-clr);
@@ -88,6 +97,7 @@ button{
 button:hover {
     color:var(--btn-clr);
     background-color: var(--secondary-clr);
+    box-shadow: 0 0 0 1px var(--btn-clr); ;
 
 }
 
@@ -116,29 +126,31 @@ img{
 /*******************************************************/
 /* component styles */
 /*******************************************************/
+/**** header **********/
 
-.main-header , nav ul{
+.header{
+    background-image: url(img/main2.jpg);
+    background-size:cover;
+    background-position: center;
+    height:100vh;
+}
+.header-btn{
+    width:300px;
     display:flex;
-    justify-content: space-between;
     align-items: center;
- 
 }
-nav li:first-child{
-   background-color: #CCC2AC;
-}
+
+
+/***** navbar ****/
+
 .logo{
     color:var(--secondary-clr);
     text-transform: capitalize;
-    font-size:30px;
+    font-size:40px;
+margin-left:2rem;
+padding-top:1rem;
 }
-nav {
 
-width:260px;
-
-}
-ul{
-    list-style: none;
-}
 
 .btn-mobile-nav{
     background: transparent;
@@ -148,18 +160,8 @@ ul{
     fill:red;
     border:2px soild red;
 }
-.header{
-    background-image: url(img/main2.jpg);
-    background-size:cover;
-    background-position: center;
-    height:100vh;
-}
 
-.header-btn{
-    width:300px;
-    display:flex;
-    align-items: center;
-}
+
 
 p +p{
     margin-top:1em;
@@ -186,16 +188,11 @@ footer .logo , footer p{
         width:80%;
         max-width:1170px;
     }
-    nav{
-        width:300px;
-    }
+ 
     a:link{
         font-size: 18px;
     }
-    .main-header{
-        margin:0.5em 3em;
-    }
-
+  
     .img{
         width:50%;
        
@@ -268,13 +265,7 @@ footer{
     width:50%;
 
 }
-nav ul{
-    gap:20px;
-   
-}
-nav a:link{
-    font-size: 24px;
-}
+
 .reviews p{
    
     max-width:700px;
